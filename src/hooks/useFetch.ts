@@ -1,8 +1,9 @@
 // npm
 import { useState, useEffect } from "react";
+import iPackage from "../interfaces/iPackage";
 
 export default function useFetch(url: string) {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState(Array<iPackage>());
   const [loading, setLoading] = useState<boolean | null>(null);
   const [error, setError] = useState<boolean | string | null>(null);
 
