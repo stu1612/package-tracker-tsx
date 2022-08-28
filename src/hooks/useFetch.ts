@@ -1,5 +1,7 @@
 // npm
 import { useState, useEffect } from "react";
+
+// interface
 import iPackage from "../interfaces/iPackage";
 
 export default function useFetch(url: string) {
