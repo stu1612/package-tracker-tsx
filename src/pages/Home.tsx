@@ -12,7 +12,6 @@ export default function Home() {
   return (
     <div>
       {loading && <p>Loading ...</p>}
-      {data && <p>data has succesfully been fetched!</p>}
       {error && <p>{error}</p>}
       {PackageItems}
     </div>
