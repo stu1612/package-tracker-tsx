@@ -10,10 +10,28 @@ export default function Home() {
   const PackageItems =
     data && data.map((item) => <PackageItem item={item} key={item.id} />);
   return (
-    <div>
-      {loading && <p>Loading ...</p>}
-      {error && <p>{error}</p>}
-      {PackageItems}
-    </div>
+    <section className="main">
+      <div className="main__inner">
+        <div className="main__inner--top">
+          <aside>
+            <div className="box">Home</div>
+            <div className="box">Home</div>
+            <div className="box">Home</div>
+            <div className="box">Home</div>
+            <div className="box">Home</div>
+            <div className="box">Home</div>
+            <div className="box">Home</div>
+            <div className="box">Home</div>
+            <div className="box">Home</div>
+            <div className="box">Home</div>
+          </aside>
+          <aside>away</aside>
+        </div>
+
+        {loading && <p>Loading ...</p>}
+        {error && <p>{error}</p>}
+        {/* {PackageItems} */}
+      </div>
+    </section>
   );
 }

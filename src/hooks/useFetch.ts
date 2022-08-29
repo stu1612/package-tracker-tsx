@@ -10,6 +10,7 @@ export default function useFetch(url: string) {
   const [error, setError] = useState<boolean | string | null>(null);
 
   useEffect(() => {
+    const controller = new AbortController();
     async function fetchURL(url: string) {
       setLoading(true);
       setError(null);
@@ -28,6 +29,9 @@ export default function useFetch(url: string) {
       }
     }
     fetchURL(url);
+    return () => {
+      controller.abort();
+    };
   }, [url]);
 
   return { data, loading, error };
