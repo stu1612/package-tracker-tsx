@@ -7,12 +7,13 @@ h3 {
 }
 
 .app-title {
-  font-size: clamp(4.2rem, 5vw, 6.8rem);
-  text-align: start;
+  font-size: clamp(2.2rem, 5vw, 6.8rem);
+  text-align: center;
   line-height: 1;
-  background: -webkit-linear-gradient(#f95738, #e36429);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #241909;
+  // background: -webkit-linear-gradient(#f95738, #e36429);
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
 }
 
 p {
@@ -30,4 +31,12 @@ button {
   font-size: 1.4rem;
   @include a.transition-ease;
   cursor: pointer;
+}
+
+@include a.media-sm {
+  .app-title {
+    background: -webkit-linear-gradient(#f95738, #e36429);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }

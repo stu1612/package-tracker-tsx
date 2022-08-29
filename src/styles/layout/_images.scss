@@ -1,0 +1,13 @@
+@use "../abstracts" as a;
+
+.home--banner {
+  height: 20vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+@include a.media-sm {
+  .home--banner {
+    display: none;
+  }
+}

@@ -5,17 +5,12 @@
   justify-content: $justify;
 }
 
-@mixin textContent {
-  @include flex(column, center, center);
-  padding: 0 10rem;
-}
-
 @mixin transition-ease {
   transition: all 0.3s ease-in-out;
 }
 
 @mixin screen-width-lg {
-  width: min(100%, 1400px);
+  width: min(90%, 1400px);
 }
 
 @mixin media-sm {

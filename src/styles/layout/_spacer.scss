@@ -1,0 +1,14 @@
+@use "../abstracts" as a;
+
+.spacer {
+  height: 30px;
+  width: 100%;
+  background-color: #f95738;
+  margin: 2rem 0;
+}
+
+@include a.media-sm {
+  .spacer {
+    display: none;
+  }
+}

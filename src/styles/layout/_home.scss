@@ -1,9 +1,9 @@
 @use "../abstracts" as a;
 
 .top--container {
-  height: 90vh;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  // height: 90vh;
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 
   aside {
     height: 100%;
@@ -11,7 +11,10 @@
   }
 
   .content {
-    @include a.textContent;
+    padding: 3rem 0;
+    &__image {
+      display: none;
+    }
   }
 
   .aside-image {
@@ -28,4 +31,21 @@
 .bottom--container {
   min-height: 90vh;
   height: auto;
+}
+
+@include a.media-sm {
+  .top--container {
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+
+  .content {
+    @include a.flex(column, center, center);
+    padding: 0 10rem !important;
+
+    &__image {
+      display: flex !important;
+    }
+  }
 }
