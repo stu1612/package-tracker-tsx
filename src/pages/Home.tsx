@@ -1,6 +1,7 @@
 // files
 import PackageItem from "../components/PackageItem";
 import useFetch from "../hooks/useFetch";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
   const { data, loading, error } = useFetch(
@@ -12,24 +13,21 @@ export default function Home() {
   return (
     <section className="main">
       <div className="main__inner">
-        <div className="main__inner--top">
-          <aside>
-            <div className="box">Home</div>
-            <div className="box">Home</div>
-            <div className="box">Home</div>
-            <div className="box">Home</div>
-            <div className="box">Home</div>
-            <div className="box">Home</div>
-            <div className="box">Home</div>
-            <div className="box">Home</div>
-            <div className="box">Home</div>
-            <div className="box">Home</div>
+        <Navbar />
+        <div className="top--container">
+          <aside className="content">
+            <h1 className="app-title">
+              Control your package items from any device
+            </h1>
           </aside>
-          <aside>away</aside>
+          <aside className="content">
+            <div className="aside-image" />
+          </aside>
         </div>
+        <div className="bottom--container">{PackageItems}</div>
 
-        {loading && <p>Loading ...</p>}
-        {error && <p>{error}</p>}
+        {/* {loading && <p>Loading ...</p>}
+        {error && <p>{error}</p>} */}
         {/* {PackageItems} */}
       </div>
     </section>

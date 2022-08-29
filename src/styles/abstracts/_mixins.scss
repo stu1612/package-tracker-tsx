@@ -1,0 +1,43 @@
+@mixin flex($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin textContent {
+  @include flex(column, center, center);
+  padding: 0 10rem;
+}
+
+@mixin transition-ease {
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin screen-width-lg {
+  width: min(100%, 1400px);
+}
+
+@mixin media-sm {
+  @media screen and (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media screen and (min-width: 1400px) {
+    @content;
+  }
+}

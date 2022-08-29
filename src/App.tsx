@@ -12,7 +12,6 @@ export default function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/package" element={<Package />} />
