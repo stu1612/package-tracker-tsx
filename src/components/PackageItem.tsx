@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 // files
 import iPackage from "../interfaces/iPackage";
+import ReactMoment from "../components/ReactMoment";
+import PackageStatus from "./PackageStatus";
 
 interface myProps {
   item: iPackage;
@@ -10,17 +12,17 @@ interface myProps {
 
 export default function PackageItem({ item }: myProps) {
   // properties
-  const { status, notes, eta, parcel_id } = item;
+  const { status, eta, parcel_id } = item;
 
   return (
-    <div className="package-item">
-      <h1>{status}</h1>
-      <p>{notes}</p>
-      <p>{eta}</p>
-      <p>{parcel_id}</p>
-      <Link to={"/package"} state={item}>
-        see details
-      </Link>
-    </div>
+    <Link className="package-item" to={"/package"} state={item}>
+      <PackageStatus status={status} />
+      <div>
+        <p className="eta">
+          <ReactMoment time={eta} />
+        </p>
+        <p>ID: #{parcel_id}</p>
+      </div>
+    </Link>
   );
 }

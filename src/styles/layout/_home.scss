@@ -1,51 +1,60 @@
 @use "../abstracts" as a;
 
-.top--container {
-  // height: 90vh;
-  // display: grid;
-  // grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+aside {
+  height: 100%;
+  width: 100%;
+}
 
-  aside {
-    height: 100%;
-    width: 100%;
-  }
-
-  .content {
-    padding: 3rem 0;
-    &__image {
-      display: none;
-    }
-  }
-
-  .aside-image {
-    background-image: url("../../assets/images/mobile.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 70%;
-    filter: drop-shadow(2px 4px 6px black);
+.content {
+  padding: 3rem 0;
+  &__image {
+    display: none;
   }
 }
 
+.aside-image {
+  background-image: url("../../assets/images/mobile.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 70%;
+  filter: drop-shadow(2px 4px 6px black);
+}
+
 .bottom--container {
-  min-height: 90vh;
   height: auto;
+  background-color: #f95738;
+  padding: 10rem 1.5rem;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
 }
 
 @include a.media-sm {
   .top--container {
     height: 90vh;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 
   .content {
     @include a.flex(column, center, center);
-    padding: 0 10rem !important;
+    padding: 0 3rem !important;
 
     &__image {
       display: flex !important;
     }
+  }
+}
+
+@include a.media-sm {
+  .bottom--container {
+    background-color: transparent;
+  }
+}
+
+@include a.media-lg {
+  .content {
+    padding: 0 10rem !important;
   }
 }

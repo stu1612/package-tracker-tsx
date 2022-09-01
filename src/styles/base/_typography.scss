@@ -11,9 +11,6 @@ h3 {
   text-align: center;
   line-height: 1;
   color: #241909;
-  // background: -webkit-linear-gradient(#f95738, #e36429);
-  // -webkit-background-clip: text;
-  // -webkit-text-fill-color: transparent;
 }
 
 p {
@@ -35,8 +32,9 @@ button {
 
 @include a.media-sm {
   .app-title {
-    background: -webkit-linear-gradient(#f95738, #e36429);
+    background: -webkit-linear-gradient(#f0114c, #f95738);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-align: start;
   }
 }

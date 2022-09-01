@@ -6,5 +6,5 @@ interface myProps {
 }
 
 export default function ReactMoment({ time }: myProps) {
-  return <Moment>{time}</Moment>;
+  return <Moment format="LL">{time}</Moment>;
 }

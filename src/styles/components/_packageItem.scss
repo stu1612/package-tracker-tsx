@@ -1,0 +1,40 @@
+@use "../abstracts" as a;
+
+.package-item {
+  width: 100%;
+  background-color: white;
+  margin: 1rem auto;
+  @include a.flex(row, center, flex-end);
+  padding: 4rem 2rem;
+  border-radius: 16px;
+  position: relative;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+}
+
+.eta {
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.status-icon {
+  position: absolute;
+  left: 10px;
+  height: 80%;
+  width: 100px;
+  object-fit: contain;
+  background-color: #ffbaac;
+  padding: 1rem;
+  border-radius: 16px;
+}
+
+@include a.media-sm {
+  .package-item {
+    background-color: #f95738;
+    @include a.flex(row, center, center);
+    padding: 5rem 0rem;
+  }
+}
